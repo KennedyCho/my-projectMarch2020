@@ -12,5 +12,5 @@ function draw() {
 
   // Get the overall volume (between 0 and 1.0)
   let vol = micInput.getLevel();
-  // console.log(vol);
+  console.log(vol);
 }
