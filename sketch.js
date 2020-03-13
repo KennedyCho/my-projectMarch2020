@@ -1,18 +1,16 @@
+var micInput;
+
 function setup() {
   createCanvas(400, 400);
-  angleMode(DEGREES);
+
+  //audio input using mic
+  micInput = new p5.AudioIn();
+  micInput.start();
 }
- 
+
 function draw() {
-  background(220);
- 
-  text("horizontal", 10, 30);
-  rotateAbout(10, 30, 45)
-  text("vertical", 10, 30);
-}
- 
-function rotateAbout(x, y, angle) {
-  translate(x, y);
-  rotate(angle);
-  translate(-x, -y);
+
+  // Get the overall volume (between 0 and 1.0)
+  let vol = micInput.getLevel();
+  // console.log(vol);
 }
