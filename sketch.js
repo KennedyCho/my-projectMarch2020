@@ -19,13 +19,10 @@ function setup() {
   micInput = new p5.AudioIn();
   micInput.start();
 
-  // amplitude object
-  amp = new p5.Amplitude();
   // fft object
   fft = new p5.FFT();
 
   fft.setInput(micInput);
-
 }
 
 function draw() {
@@ -35,10 +32,17 @@ function draw() {
   // Get the overall volume (between 0 and 1.0)
   let micVol = micInput.getLevel();
 
-  let ampTest = amp.getLevel();
+  // "bass", "lowMid", "mid", "highMid", "treble"
+  let bassLevel = fft.getEnergy("bass");
+  let lowMidLevel = fft.getEnergy("lowMid");
+  let midLevel = fft.getEnergy("mid");
+  let highMidLevel = fft.getEnergy("highMid");
+  let trebleLevel = fft.getEnergy("treble");
 
   // test output
-  console.log("Mic Amp: "+micVol);
+  // console.log("Mic Volume: "+micVol);
+  // console.log("FFT: "+spectrum[0]);
+  // console.log("Bass: "+bassVol);
 
 
 
