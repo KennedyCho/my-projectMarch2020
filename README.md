@@ -6,6 +6,7 @@ Spring 2020
 ### Noise Art 
 [ZEIT](https://my-project-march2020.now.sh)  
 [Documentation Blog](https://wp.nyu.edu/kennedycambracho/)  
+
 My work illustrates the dynamic nature of personal perception in relation to spatial audio. I use P5.js, the javascript library, and the surrounding ambient noise as input to create a real-time visual abstraction of spatial audio. This process mimics the experience of synesthesia where stimuli are incorrectly processed and perceived by an individual. My synthetic sensory experience offers users a chance to view the links formed between auditory input and visual output through abstract art.
 What fascinates me about synesthesia is its relation to individual reality construction. Those who are diagnosed with synesthesia experience a separate reality. Their perceived world is so far removed from my understanding that simply imagining the experience is near impossible. With this project, I provide a lens to view an alternate sensorial reality.  
 
