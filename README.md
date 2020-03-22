@@ -4,8 +4,8 @@ Prof. Oliver Steele
 Spring 2020  
 
 ### Noise Art 
-[ZEIT](https://my-project-march2020.now.sh)
-[Documentation Blog](https://wp.nyu.edu/kennedycambracho/)
+[ZEIT](https://my-project-march2020.now.sh)  
+[Documentation Blog](https://wp.nyu.edu/kennedycambracho/)  
 My work illustrates the dynamic nature of personal perception in relation to spatial audio. I use P5.js, the javascript library, and the surrounding ambient noise as input to create a real-time visual abstraction of spatial audio. This process mimics the experience of synesthesia where stimuli are incorrectly processed and perceived by an individual. My synthetic sensory experience offers users a chance to view the links formed between auditory input and visual output through abstract art.
 What fascinates me about synesthesia is its relation to individual reality construction. Those who are diagnosed with synesthesia experience a separate reality. Their perceived world is so far removed from my understanding that simply imagining the experience is near impossible. With this project, I provide a lens to view an alternate sensorial reality.  
 
@@ -20,7 +20,7 @@ In order to convey the sense of environment, I chose to use WEBGL rederer. The 3
 #### Reflection
 If given more time, I would like to develop a more efficient visual language. This would facilitate users in identifying patterns and the subsequent information exchange. A successful visual language accurately conveys the audio input's characteristics while also presenting itself in such a way that users are able to interpret the meaning.
 
-### Resources 
+#### Resources 
 [Spectrum Properties](https://www.gigahertz-optik.de/en-us/basics-light-measurement/light-color/spectr-line-properties/)
 
 [P5.js Sound Library](https://p5js.org/reference/#/libraries/p5.sound)
