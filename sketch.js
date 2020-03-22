@@ -20,7 +20,7 @@ let trebleLevel;
 let angleX = 0;
 let angleY = 0;
 let angleZ = 0;
-
+let angleZMid = 0;
 
 function preload(){
 
@@ -32,9 +32,7 @@ function preload(){
 function setup() {
   createCanvas(400, 400, WEBGL);
   background(175);
-
-  // colorMode(HSB);
-
+  noStroke();
   // play mp3 file
   // sampleAudio.play();
 
@@ -62,29 +60,48 @@ function setup() {
 // }
 
 function draw() {
-  background(175);
-  // assign fft analysis
-  let spectrum = fft.analyze(); // default 1024
+  background(0);
 
   // Get the overall volume (between 0 and 1.0)
-  // let micVol = micInput.getLevel();
+  let micVol = micInput.getLevel();
+
+  // assign fft analysis
+  let spectrum = fft.analyze(); // default 1024
 
   bassLevel = fft.getEnergy("bass");
   lowMidLevel = fft.getEnergy("lowMid");
   midLevel = fft.getEnergy("mid");
   highMidLevel = fft.getEnergy("highMid");
   trebleLevel = fft.getEnergy("treble");
+
+  normalMaterial();
+
   angleMode(DEGREES)
 
-  rectMode(CENTER);
   noStroke();
-  normalMaterial();
-  rotateY(angleY);
-  rotateX(angleX);
-  rotateZ(angleZ);
-  box(50, 50, 50);
+  push();
+  rotateZ(angleZMid);
+  torus(width/3, width/20, 4, 16);
+  angleZMid += micVol*1000;
+  pop();
+
+  // push();
+  // rotate()
+  // torus(width/2, width/20, 4, 16);
+  // pop();
+
+  push();
+  rectMode(CENTER);
+  rotateY(angleY); // bassLevel control
+  rotateX(angleX); // midLevel control
+  rotateZ(angleZ); // trebleLevel control
+  box(width/5); //center cube
 
   angleY += map(bassLevel, 0, 255, 0, 4)
   angleX += map(midLevel, 0, 255, 0, 4)
   angleZ += map(trebleLevel, 0, 255, 0, 4)
+
+  pop();
+
+
 }
