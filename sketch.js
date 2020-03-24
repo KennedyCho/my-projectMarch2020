@@ -21,7 +21,7 @@ function preload(){
 function setup() {
   colorMode(HSB);
   angleMode(DEGREES);
-  createCanvas(500, 500);
+  createCanvas(600, 600);
   background(100);
   noStroke();
 
@@ -107,19 +107,5 @@ function draw() {
   rotate(120+millis()/10);
   triangle(0, 0, -moveW3, moveH3, moveW3, moveH3);
   pop();
-
-  // triangle(0, 0, -w, h, 0, h);
-
-
-
-
-  //create array obj
-  // add in hist of readings obj.push(reading)
-  // when array length is greater than degrees in circle 360
-  // splice(0, 1)
-  // move center with translate
-  // x = radius * cos(time)
-  // y = radius * sin(time)
-
 
 }
