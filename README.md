@@ -17,9 +17,11 @@ Before begining the production process, I first reviewed the P5.js sound library
 Using a sample mp3 file (found [here](https://freemusicarchive.org)), I began by looking at the array returned from `FFT.analyze()`. The array contains the measurements at a number of frequencies (default is 1024). 
 By cutting the array down (changing the number of bins) and breaking it into various frequency ranges, I was able to have a single float represent a single, dynamic characteristic of the audio sample. This number is produced using `getEnergy(frequency)`. Here the frequency is defined as a string value: "bass", "lowMid" "mid", "highMid", and "treble". 
 #### Design 
-In order to convey the sense of environment, I chose to use WEBGL rederer. The 3D space allows the visualization to live within a world with depth; it mimics how the audio input exists within a dynamic environment where the space is not separate from sound but intertwined with its production and perception. 
+In my first draft, I chose to use WEBGL rederer to help convey the sense of environment. The 3D space allows the visualization to live within a world with depth; it mimics how the audio input exists within a dynamic environment where the space is not separate from sound but intertwined with its production and perception. 
+Moving forward I felt a simpler design would help present the data more effectively. Using the `triangle()` object in p5, I created a rotating visualization that highlighted the audio's bass, mid and treble frequency. The primary elements of western pop are often split into these three ranges; they helped to display the beat (using the bass) as well as the instrumentals and vocals (which often precide within the mid and treble range). 
 #### Reflection
 If given more time, I would like to develop a more efficient visual language. This would facilitate users in identifying patterns and the subsequent information exchange. A successful visual language accurately conveys the audio input's characteristics while also presenting itself in such a way that users are able to interpret the meaning.
+This visualization works best with pre-recorded music because the structural patterns aide the user in understanding the relationship between each element in the sketch. In my next iteration I will work on making the relationship apparent regardless of the audio input. 
 
 #### Resources 
 [Spectrum Properties](https://www.gigahertz-optik.de/en-us/basics-light-measurement/light-color/spectr-line-properties/)
