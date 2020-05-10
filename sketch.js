@@ -21,7 +21,7 @@ function preload(){
 function setup() {
   colorMode(HSB);
   angleMode(DEGREES);
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
   background(100);
   noStroke();
 
