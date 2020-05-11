@@ -15,7 +15,7 @@ let xPos = 0;
 
 function preload(){
   // mp3 file
-  sampleAudio = loadSound('testAudio.mp3')
+  sampleAudio = loadSound('test.mp3')
 }
 
 function setup() {
@@ -36,10 +36,10 @@ function setup() {
   fft = new p5.FFT(0, 256); //bin must be power of 2
 
   // analyze microphone input
-  fft.setInput(micInput);
+  // fft.setInput(micInput);
 
   // analyze test audio file
-  // fft.setInput(sampleAudio);
+  fft.setInput(sampleAudio);
 
 
 

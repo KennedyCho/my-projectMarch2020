@@ -1,3 +1,11 @@
 body {
     margin: 0;
 }
+
+#inst{
+    font-family: 'Jost', sans-serif;
+    position: absolute;
+    transform: translate(-50%);
+    top: 10%;
+    left: 50%;
+}
